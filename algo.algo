@@ -1,0 +1,19 @@
+ALGORITHM checkpoint
+VAR
+    v,w,l : INTEGER:=0;
+    c: CHAR;
+BEGIN
+REPEAT
+read (c)
+l++
+IF (c.toUpperCase()in [A,E,I, O, U]) THEN
+       v++;
+   END_IF
+IF (c= ' ' ) THEN
+       w++;
+END_IF
+UNTIL (c= '.' )
+write ( 'The length of the sentence is ', l)
+write ('The number of vowles ',v)
+write ('The number of words is', w+1)
+END
