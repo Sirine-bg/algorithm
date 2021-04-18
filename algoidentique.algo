@@ -23,14 +23,6 @@ WHILE (j<tab2.length) DO
 END_WHILE
  i:= i+1 
 END_WHILE
-WHILE (j<tab2.length) DO
-WHILE (i<tab1.length) DO
-    IF (tab2[j]=tab1[i]) THEN
-        sum:= sum + tab2[j]
-    END_IF
-  i:= i+1 
-END_WHILE
- j:= j+1 
-END_WHILE
- Write('The sum of overlapping elements', sum);
+
+ Write('The sum of overlapping elements', sum*2);
 END
