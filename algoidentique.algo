@@ -1,4 +1,4 @@
-ALGORITHM sum_distinct_elements
+ALGORITHM sum_overlapping_elements
 VAR
     i,j,sum: INTEGER:=0;
     l1,l2: INTEGER
