@@ -1,0 +1,36 @@
+ALGORITHM sum_distinct_elements
+VAR
+    i,j,sum: INTEGER:=0;
+    l1,l2: INTEGER
+    tab1 ,tab2 : ARRAY_OF INTEGER[];
+BEGIN
+Write("Give the length of the table")
+Read (l1)
+FOR i FROM 0 TO l1-1   DO
+   read (tab1[i])
+END_FOR
+Write("Give the length of the second table")
+Read (l2)
+FOR j FROM 0 TO l2-1   DO
+   read (tab2[j])
+END_FOR
+WHILE (i<tab1.length) DO
+WHILE (j<tab2.length) DO
+    IF (tab1[i]=tab2[j]) THEN
+        sum:= sum + tab1[i]
+    END_IF
+    j:= j+1 
+END_WHILE
+ i:= i+1 
+END_WHILE
+WHILE (j<tab2.length) DO
+WHILE (i<tab1.length) DO
+    IF (tab2[j]=tab1[i]) THEN
+        sum:= sum + tab2[j]
+    END_IF
+  i:= i+1 
+END_WHILE
+ j:= j+1 
+END_WHILE
+ Write('The sum of overlapping elements', sum);
+END
